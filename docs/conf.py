@@ -27,12 +27,4 @@ root_doc = 'index'
 #import sphinx_rtd_theme
 
 #html_theme = "sphinx_rtd_theme"
-html_theme = 'alkira_theme'
-html_static_path = ['_static']
-html_theme_path = ['themes/']
-
-html_logo = 'images/logo.png'
-html_theme_options = {
-    'logo_only': True,
-    'display_version': False,
-}
+html_theme = 'bizstyle'

@@ -1,3 +1,5 @@
+.. index:: second doc
+   
 Employee Review Cycle
 =====================
 

@@ -1,3 +1,5 @@
+.. index:: third doc
+
 Manager Review Cycle
 ====================
 

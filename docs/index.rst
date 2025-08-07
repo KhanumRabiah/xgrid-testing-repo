@@ -3,8 +3,28 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. index:: index main document
+
 xgridone documentation
 ======================
+
+.. meta::
+   :keywords: password reset, account recovery, login issues
+   :description: This document provides step-by-step instructions for resetting your account password.
+      This document provides step-by-step instructions for resetting your account password.
+      This document provides step-by-step instructions for resetting your account password.
+      This document provides step-by-step instructions for resetting your account password.
+      This document provides step-by-step instructions for resetting your account password.
+   :product: MyProduct
+   :version: 3.2
+   :audience: End-user
+   :Introduction: The X-Pulse 360 Review process enables Xgrid a comprehensive quarterly evaluation framework for employees, fostering continuous improvement and feedback.
+   :phases: active, processing, done phase
+   :step-by-step: follow a step by step approach
+   :huge-issue: submission and cycle freq
+
+.. index:: house
+
 
 **Introduction**
 ================
@@ -28,7 +48,7 @@ The X-Pulse 360 Review process enables Xgrid a comprehensive quarterly evaluatio
 * Reviews are submitted only once for each quarter and require manager approval before completion.
 
 * Drafts can be saved before submission but become inaccessible after the Active phase deadline.
-
+   
 **Final Remarks and Accessibility:**
 -------------------------------------
 * The Final Remarks section is editable by the manager before the Done phase.
