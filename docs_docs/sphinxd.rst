@@ -49,16 +49,29 @@ Code Example
 Tables
 ^^^^^^
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. _`column1`:
 
+column1:
 
-   * - Column 1
-     - Column 2
+Column 2
 
-   * - Data 1
-     - Data 2
+Column 3
+
+.. _`alistof`:
+
+alistof:
+
+short items
+
+that should be
+
+.. _`displayed`:
+
+displayed:
+
+horizontally
+
+(next item if exists)
 
 
 ..
@@ -151,32 +164,14 @@ Indexing
 Glossary
 ========
 
-This Document
-^^^^^^^^^^^^^
+1. This document ensures that when converted to an RST format, appropriate Sphinx directives will be required for correct formatting.
 
-This document ensures that when converted to an RST format, appropriate Sphinx directives will be required for correct formatting.
+2. A structure where information about all documents under the root is saved and used for cross-referencing: the environment is pickled after the parsing
+   stage so that successive runs only need to read and parse new and changed documents.
 
-environment
-^^^^^^^^^^^
+3. The directory, including its subdirectories, contains all source files for one Sphinx project.
 
-A structure where information about all documents under the root is saved and used for cross-referencing: the environment is pickled after the parsing
-stage so that successive runs only need to read and parse new and changed documents.
-
-source directory
-^^^^^^^^^^^^^^^^
-
-The directory, including its subdirectories, contains all source files for one Sphinx project.
-
-This directive creates a centered boldfaced line of text.
-
-Hlist
-^^^^^
-
-Column 1 Column 2 Column 3
-
-A list of short items that should be
-
-displayed horizontally (next item if exists)
+4. This directive creates a centered boldfaced line of text.
 
 .. |sphinx002| image:: media/sphinx002.png
    :width: 6.5in

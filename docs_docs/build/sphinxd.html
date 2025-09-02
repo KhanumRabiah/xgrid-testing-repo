@@ -128,20 +128,15 @@ Below are different content types typically used in documentation.</p>
 </div>
 <section id="tables">
 <h4>Tables<a class="headerlink" href="#tables" title="Link to this heading"></a></h4>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 50.0%" />
-<col style="width: 50.0%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>Column 1</p></td>
-<td><p>Column 2</p></td>
-</tr>
-<tr class="row-even"><td><p>Data 1</p></td>
-<td><p>Data 2</p></td>
-</tr>
-</tbody>
-</table>
+<p id="column1">column1:</p>
+<p>Column 2</p>
+<p>Column 3</p>
+<p id="alistof">alistof:</p>
+<p>short items</p>
+<p>that should be</p>
+<p id="displayed">displayed:</p>
+<p>horizontally</p>
+<p>(next item if exists)</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span> <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML Test Page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to My Test Page<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This
 is a simple paragraph to test HTML rendering.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Sample Image<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://via.placeholder.com/150&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Placeholder Image&quot;</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Sample
 Code Block<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>def hello_world(): print(&quot;Hello, world!&quot;)<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -247,14 +242,13 @@ own avenger.</p>
 </section>
 <section id="glossary">
 <h1>Glossary<a class="headerlink" href="#glossary" title="Link to this heading"></a></h1>
-<p>This document ensures that when converted to an RST format, appropriate Sphinx directives will be required for correct formatting.</p>
-<p>A structure where information about all documents under the root is saved and used for cross-referencing: the environment is pickled after the parsing
-stage so that successive runs only need to read and parse new and changed documents.</p>
-<p>The directory, including its subdirectories, contains all source files for one Sphinx project.</p>
-<p>This directive creates a centered boldfaced line of text.</p>
-<p>Column 1 Column 2 Column 3</p>
-<p>A list of short items that should be</p>
-<p>displayed horizontally (next item if exists)</p>
+<ol class="arabic simple">
+<li><p>This document ensures that when converted to an RST format, appropriate Sphinx directives will be required for correct formatting.</p></li>
+<li><p>A structure where information about all documents under the root is saved and used for cross-referencing: the environment is pickled after the parsing
+stage so that successive runs only need to read and parse new and changed documents.</p></li>
+<li><p>The directory, including its subdirectories, contains all source files for one Sphinx project.</p></li>
+<li><p>This directive creates a centered boldfaced line of text.</p></li>
+</ol>
 </section>
 
 
