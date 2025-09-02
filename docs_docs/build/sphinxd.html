@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sphinx Directives Reference Document &mdash; RstDoc Project 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Employee Review Cycle" href="doc1.html" />
+    <link rel="prev" title="doc1" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            RstDoc Project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx Directives Reference Document</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#code-example">Code Example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tables">Tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hyperlinks">Hyperlinks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mathematical-equations">Mathematical Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#images">Images</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#indexing">Indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#glossary">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc1.html">Employee Review Cycle</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RstDoc Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Sphinx Directives Reference Document</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/sphinxd.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinx-directives-reference-document">
+<h1>Sphinx Directives Reference Document<a class="headerlink" href="#sphinx-directives-reference-document" title="Link to this heading"></a></h1>
+<p>This document includes various examples that, when converted to an RST format, will require the use of Sphinx directives.</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Sphinx is a powerful tool for generating documentation.
+Below are different content types typically used in documentation.</p>
+<section id="code-example">
+<h3>Code Example<a class="headerlink" href="#code-example" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span> <span class="kn">from</span><span class="w"> </span><span class="nn">pandocfilters</span><span class="w"> </span><span class="kn">import</span> <span class="n">toJSONFilter</span><span class="p">,</span> <span class="n">RawBlock</span><span class="p">,</span> <span class="n">Para</span> <span class="k">def</span><span class="w"> </span><span class="nf">detect_code_blocks</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">meta</span><span class="p">):</span> <span class="s2">&quot;&quot;&quot; Detect preformatted text in</span>
+<span class="s2">Word documents and convert it to ..</span>
+<span class="s2">code-block:: directives in RST.</span>
+<span class="s2">&quot;&quot;&quot;</span> <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;Para&quot;</span><span class="p">:</span>  <span class="c1"># Word preformatted text might be wrapped in Para text = value[0].get(&quot;c&quot;, &quot;&quot;) if isinstance(text, str) and text.startswith(&quot;</span>
+<span class="s2">&quot;):  # Detect indented text return RawBlock(&quot;</span><span class="n">rst</span><span class="s2">&quot;, &quot;</span><span class="o">..</span>
+<span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span>\<span class="n">n</span>\<span class="n">n</span>    <span class="s2">&quot; + text.replace(&quot;</span>\<span class="n">n</span><span class="s2">&quot;, &quot;</span>\<span class="n">n</span>    <span class="s2">&quot;))</span>
+
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">pandocfilters</span>
+
+<span class="kn">import</span> <span class="n">toJSONFilter</span><span class="p">,</span> <span class="n">RawBlock</span><span class="p">,</span> <span class="n">Para</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">detect_code_blocks</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">meta</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Detect preformatted text in Word documents and convert it to ..</span>
+<span class="sd">    code-block:: directives in RST.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;Para&quot;</span><span class="p">:</span>  <span class="c1"># Word preformatted text might be wrapped in Para</span>
+
+        <span class="n">text</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">):</span>  <span class="c1"># Detect indented text</span>
+
+            <span class="k">return</span> <span class="n">RawBlock</span><span class="p">(</span><span class="s2">&quot;rst&quot;</span><span class="p">,</span> <span class="s2">&quot;..</span>
+            <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span>\\<span class="n">n</span>\\<span class="n">n</span>    <span class="s2">&quot; + text.replace(&quot;</span>\\<span class="n">n</span><span class="s2">&quot;, &quot;</span>\\<span class="n">n</span>    <span class="s2">&quot;))</span>
+</pre></div>
+</div>
+<section id="tables">
+<h4>Tables<a class="headerlink" href="#tables" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Column 1</p></td>
+<td><p>Column 2</p></td>
+</tr>
+<tr class="row-even"><td><p>Data 1</p></td>
+<td><p>Data 2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span> <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML Test Page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to My Test Page<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This
+is a simple paragraph to test HTML rendering.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Sample Image<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://via.placeholder.com/150&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Placeholder Image&quot;</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Sample
+Code Block<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>def hello_world(): print(&quot;Hello, world!&quot;)<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+
+
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML Test Page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to My Test Page<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is a simple paragraph to test HTML rendering.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Sample Image<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://via.placeholder.com/150&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Placeholder Image&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Sample Code Block<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>def hello_world():
+
+print(&quot;Hello, world!&quot;)<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="hyperlinks">
+<h4>Hyperlinks<a class="headerlink" href="#hyperlinks" title="Link to this heading"></a></h4>
+<p>Visit the <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx Website</a> for more details.</p>
+</section>
+<section id="mathematical-equations">
+<h4>Mathematical Equations<a class="headerlink" href="#mathematical-equations" title="Link to this heading"></a></h4>
+<p>Einstein’s famous equation:</p>
+<div class="math notranslate nohighlight">
+\[E\  = \ mc²\]</div>
+<div class="math notranslate nohighlight">
+\[\ \ \ {(a\  + \ b)}^{2}\  = \ a^{2}\  + \ 2ab\  + \ b^{2}\]</div>
+</section>
+<section id="images">
+<h4>Images<a class="headerlink" href="#images" title="Link to this heading"></a></h4>
+<p><a class="reference internal" href="_images/sphinx002.png"><img alt="sphinx002" src="_images/sphinx002.png" style="width: 6.5in; height: 3.62639in;" /></a></p>
+</section>
+</section>
+</section>
+</section>
+<section id="indexing">
+<h1>Indexing<a class="headerlink" href="#indexing" title="Link to this heading"></a></h1>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Keyword for indexing: keyword
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Please may I have your attention.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Exercise due caution.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Let none think to fly the danger for soon or late love is his
+own avenger.</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>ERROR 418: I’m a teapot.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Look under the flowerpot.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This is a statement of paramount importance.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is not suitable for sending tins of spam.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember your sun cream!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Beware of the dog.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Module zipfile. Documentation of the zipfile standard module.</p>
+</div>
+</section>
+<section id="glossary">
+<h1>Glossary<a class="headerlink" href="#glossary" title="Link to this heading"></a></h1>
+<p>This document ensures that when converted to an RST format, appropriate Sphinx directives will be required for correct formatting.</p>
+<p>A structure where information about all documents under the root is saved and used for cross-referencing: the environment is pickled after the parsing
+stage so that successive runs only need to read and parse new and changed documents.</p>
+<p>The directory, including its subdirectories, contains all source files for one Sphinx project.</p>
+<p>This directive creates a centered boldfaced line of text.</p>
+<p>Column 1 Column 2 Column 3</p>
+<p>A list of short items that should be</p>
+<p>displayed horizontally (next item if exists)</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="doc1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="doc1.html" class="btn btn-neutral float-right" title="Employee Review Cycle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RstDoc Project Xgrid Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
